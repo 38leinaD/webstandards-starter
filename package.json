@@ -1,0 +1,27 @@
+{
+  "name": "webstandards-starter",
+  "version": "1.0.0",
+  "description": "Starter project for web-development using the web's latest standards.",
+  "main": "main.js",
+  "scripts": {
+    "install": "npx @pika/web",
+    "start": "browser-sync src -f src --cors --no-notify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/38leinaD/webstandards-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/38leinaD/webstandards-starter/issues"
+  },
+  "homepage": "https://github.com/38leinaD/webstandards-starter#readme",
+  "devDependencies": {
+    "@pika/web": "^0.4.3",
+    "browser-sync": "^2.26.7"
+  },
+  "dependencies": {
+    "lit-element": "^2.2.0"
+  }
+}
