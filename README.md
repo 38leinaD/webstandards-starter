@@ -17,7 +17,6 @@ You will need Chrome 74+.
 Additonally, you need to enable the experimental support for import maps. 
 Go to link:chrome://flags/[] and enable "Built-in module infra and import maps".
 
-
 ### Run
 
 Assuming you did the previous steps, you can now run:
@@ -25,11 +24,14 @@ Assuming you did the previous steps, you can now run:
     git clone https://github.com/38leinaD/webstandards-starter.git
     cd webstandards-starter
     npm install
-    browser-sync src -f src --cors --no-notify
+    npm start
 
 **_NOTE:_**  The command 'npm install' has been overwitten in the `package.json` to also run 'npx @pika/web'.
 
 ## Tips
 
-You should have [browser-sync](https://browsersync).io/ installed globally. If not, run `sudo npm install -g browser-sync`.
-but I don`t want to download it for each project I am working on as it is such an essential tool.
+For convenience, I have added a `devDependency` in the `package.json` to download browser-sync.
+You should really have [browser-sync](https://browsersync.io/) installed globally. Run `sudo npm install -g browser-sync`.
+I don`t want to download it for each project I am working on as it is such an essential tool.
+
+The same holds true to me for `@pika/web`. 
