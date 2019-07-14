@@ -75,3 +75,9 @@ typings/
 
 # cypress folder
 cypress
+
+# Mac
+.DS_Store
+
+# 
+src/lib

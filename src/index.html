@@ -12,11 +12,14 @@
     {
       "imports": {
         "lit-element": [
-          "./web_modules/lit-element.js"
+            "./lib/lit-element.js"
           
           // In case you want to serve from the web directly use:
           //  "https://cdn.pika.dev/lit-element/v2"
           // In this case, there is not even the need for 'npm install'  
+        ],
+        "lit-html/directives/until": [
+            "./lib/lit-html/directives/until.js"
         ]
       }
     }
@@ -37,16 +40,16 @@
             </ul>
         </nav>
         <article>
-            <a-hello>
+            <app-main>
                 <p>Your browser does not seem to support all features needed to run this demo.</p>
                 <p>Please see the instructions in the README and check for errors in the console.</p>
-            </a-hello>
+            </app-main>
         </article>
         <footer>
             <small>&copy; 2019</small>
         </footer>
     </main>
-    <script src="app.js" type="module"></script>
+    <script src="AppMain.js" type="module"></script>
 </body>
 
 </html>

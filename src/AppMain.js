@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit-element';
+import { until } from 'lit-html/directives/until'
 
-export default class AHello extends LitElement {
+export default class AppMain extends LitElement {
 
     static get properties() {
         return {
@@ -21,6 +22,7 @@ export default class AHello extends LitElement {
 
     render() {
         return html`
+            <h1>${until(this.fetchFromServer(), html`Loading...`)}</h1>
             <div>Type your name and press Enter.</div>
             <input type='text' class="input" placeholder="Your name" @keydown='${this.onKeyDown}'/>
             <div>${this.name
@@ -29,6 +31,13 @@ export default class AHello extends LitElement {
             }</div>
         `;
     }
+
+    async fetchFromServer() {
+        const response = await fetch('./data.json');
+        const json = await response.json();
+
+        return html`Message from server: ${json.message}`
+    }
 }
 
-customElements.define('a-hello', AHello);
+customElements.define('app-main', AppMain);
