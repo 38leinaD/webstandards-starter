@@ -1,42 +1,80 @@
-import { html, LitElement } from 'lit-element';
-import { until } from 'lit-html/directives/until'
+import { html, LitElement } from './lib/lit-element.js';
+import { Router } from './lib/@vaadin/router.js';
+
+import './ViewA.js'
+import './ViewB.js'
 
 export default class AppMain extends LitElement {
 
-    static get properties() {
-        return {
-            name: { type: String }
-        };
-    }
-
     constructor() {
         super();
-        this.name = undefined;
     }
 
-    onKeyDown(event) {
-        if (event.code === 'Enter') {
-            this.name = event.target.value;
-        }
+    connectedCallback() {
+        super.connectedCallback();
+    }
+
+    firstUpdated(changedProperties) {
+        this.initRouter();
+    }
+
+    initRouter() {
+        const outlet = document.querySelector('#outlet');
+        this.router = new Router(outlet);
+
+        window.addEventListener('vaadin-router-location-changed', (event) => {
+            //this.requestUpdate();
+        });
+
+        this.router.setRoutes([
+            {
+                name: 'viewa', path: '/', component: 'view-a'
+            },
+            {
+                name: 'viewb', path: '/b', component: 'view-b'
+            },
+            {
+                path: '(.*)', component: 'view-a'
+            },
+        ]);
+
+        window.addEventListener('vaadin-router-location-changed', (event) => {
+
+        });
+
+        this.requestUpdate();
+    }
+
+    createRenderRoot() {
+        return this;
     }
 
     render() {
         return html`
-            <h1>${until(this.fetchFromServer(), html`Loading...`)}</h1>
-            <div>Type your name and press Enter.</div>
-            <input type='text' class="input" placeholder="Your name" @keydown='${this.onKeyDown}'/>
-            <div>${this.name
-                ? html`Hello ${this.name}!`
-                : html`---`
-            }</div>
+        <main>
+            <header>
+                <h2>header</h2>
+            </header>
+            <nav>
+                ${this.router != null ?
+                html`
+                <ul>
+                    <li>
+                    <a href="${this.router.urlForName("viewa")}">View A</a>
+                    </li>
+                    <li>
+                        <a href="${this.router.urlForName("viewb")}">View B</a>
+                    </li>
+                </ul>
+                ` : html``}
+            </nav>
+            <article id="outlet">
+            </article>
+            <footer>
+                <small>&copy; 2019</small>
+            </footer>
+        </main>
         `;
-    }
-
-    async fetchFromServer() {
-        const response = await fetch('./data.json');
-        const json = await response.json();
-
-        return html`Message from server: ${json.message}`
     }
 }
 

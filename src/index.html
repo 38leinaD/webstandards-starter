@@ -4,52 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>hello world</title>
+    <title>hello webstandards</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script type="importmap">
-    {
-      "imports": {
-        "lit-element": [
-            "./lib/lit-element.js"
-          
-          // In case you want to serve from the web directly use:
-          //  "https://cdn.pika.dev/lit-element/v2"
-          // In this case, there is not even the need for 'npm install'  
-        ],
-        "lit-html/directives/until": [
-            "./lib/lit-html/directives/until.js"
-        ]
-      }
-    }
-    </script>
-
+    <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
 </head>
 
 <body>
-    <main>
-        <header>
-            <h2>header</h2>
-        </header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">home</a>
-                </li>
-            </ul>
-        </nav>
-        <article>
-            <app-main>
-                <p>Your browser does not seem to support all features needed to run this demo.</p>
-                <p>Please see the instructions in the README and check for errors in the console.</p>
-            </app-main>
-        </article>
-        <footer>
-            <small>&copy; 2019</small>
-        </footer>
-    </main>
-    <script src="AppMain.js" type="module"></script>
+    <app-main>
+        <p>Your browser does not seem to support all features needed to run this demo.</p>
+        <p>Please see the instructions in the README and check for errors in the console.</p>
+    </app-main>
+    <script src="./AppMain.js" type="module"></script>
 </body>
 
 </html>
