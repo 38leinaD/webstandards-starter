@@ -18,13 +18,13 @@
   },
   "homepage": "https://github.com/38leinaD/webstandards-starter#readme",
   "devDependencies": {
-    "@pika/web": "^0.4.3",
+    "@pika/web": "^0.6.1",
     "browser-sync": "^2.26.7"
   },
   "dependencies": {
     "@vaadin/router": "^1.4.1",
-    "lit-element": "^2.2.0",
-    "lit-html": "^1.1.1"
+    "lit-element": "^2.2.1",
+    "lit-html": "^1.1.2"
   },
   "@pika/web": {
     "webDependencies": [
