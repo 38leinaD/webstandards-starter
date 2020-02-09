@@ -1,4 +1,4 @@
-import { html, LitElement, customElement, property } from '/lib/lit-element.js';
+import { html, LitElement, property, customElement } from '/lib/lit-element.js';
 import Navigo from '/lib/navigo.js';
 
 

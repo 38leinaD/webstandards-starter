@@ -1,5 +1,5 @@
-import { html, LitElement, customElement, property } from './lib/lit-element.js';
-import { until } from './lib/lit-html/directives/until.js';
+import { html, LitElement, property, customElement } from '/lib/lit-element.js';
+import { until } from '/lib/lit-html/directives/until.js';
 
 @customElement('view-b')
 export default class ViewB extends LitElement {
