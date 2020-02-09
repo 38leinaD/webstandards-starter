@@ -1,6 +1,8 @@
 import { html, LitElement } from './lib/lit-element.js';
 import { until } from './lib/lit-html/directives/until.js';
 
+import Test from './Test.js'
+
 export default class ViewA extends LitElement {
 
     static get properties() {
@@ -34,6 +36,7 @@ export default class ViewA extends LitElement {
                 ? html`Hello ${this.name}!`
                 : html`---`
             }</div>
+            <div>${new Test().say()}</div>
         `;
     }
 
