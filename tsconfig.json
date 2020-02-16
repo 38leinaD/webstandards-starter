@@ -8,6 +8,7 @@
         "moduleResolution": "node",
         // Optional, but recommended
         "baseUrl": "./src",
+        "sourceMap": true,
         // Required: Map "/web_modules/*" imports back to their node_modules/ TS definition files.
         "paths": {
             "/lib/*.js": [

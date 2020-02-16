@@ -6,3 +6,4 @@ export default class Test {
         return "Hi you1344!";
     }
 }
+//# sourceMappingURL=Test.js.map

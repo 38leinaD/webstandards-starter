@@ -72,3 +72,4 @@ AppMain = __decorate([
     customElement('app-main')
 ], AppMain);
 export default AppMain;
+//# sourceMappingURL=AppMain.js.map

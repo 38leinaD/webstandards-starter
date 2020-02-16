@@ -27,3 +27,4 @@ ViewB = __decorate([
     customElement('view-b')
 ], ViewB);
 export default ViewB;
+//# sourceMappingURL=ViewB.js.map

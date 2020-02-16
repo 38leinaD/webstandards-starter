@@ -43,6 +43,8 @@ typings/
 # Optional npm cache directory
 .npm
 
+*.map
+
 # Optional eslint cache
 .eslintcache
 
