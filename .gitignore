@@ -81,3 +81,5 @@ cypress
 
 # 
 src/lib
+
+*.map
