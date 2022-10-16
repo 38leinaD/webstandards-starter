@@ -1,5 +1,5 @@
 import { html, LitElement } from './lib/lit-element.js';
-import { Router } from './lib/@vaadin/router.js';
+import { Router } from './lib/@vaadin/router/dist/vaadin-router.js';
 
 import './ViewA.js'
 import './ViewB.js'
